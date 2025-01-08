@@ -1,5 +1,5 @@
 /*
- * Use this CSS to learn some intersting techniques,
+ * Use this CSS to learn some interesting techniques,
  * in case you're wondering how I built the UI.
  * Have fun! 😁
  */
@@ -98,6 +98,7 @@ nav {
   font-size: 15px;
   line-height: 1.8;
 }
+
 /* MAIN */
 .app {
   position: relative;
@@ -108,7 +109,7 @@ nav {
   grid-template-rows: auto repeat(3, 15rem) auto;
   gap: 2rem;
 
-  /* NOTE This creates the fade in/out anumation */
+  /* NOTE This creates the fade in/out animation */
   opacity: 0;
   transition: all 1s;
 }
@@ -254,7 +255,7 @@ h2 {
   gap: 0.4rem 1rem;
 }
 
-/* Exceptions for interst */
+/* Exceptions for interest */
 .form.form--loan {
   grid-template-columns: 2.5fr 1fr 2.5fr;
 }
@@ -309,4 +310,150 @@ h2 {
 
 .timer {
   font-weight: 600;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .welcome {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .logo {
+    height: 4rem;
+    margin-bottom: 1rem;
+  }
+
+  .login {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .login__input {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .login__btn {
+    font-size: 1.8rem;
+  }
+
+  .app {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .balance {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .balance__value {
+    font-size: 3rem;
+  }
+
+  .movements__row {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: flex-start; /* Align items to the left */
+    padding: 1.5rem 2rem; /* Reduce padding for smaller screens */
+  }
+
+  .movements__type {
+    margin-right: 0; /* Remove margin for stacked layout */
+    margin-bottom: 0.5rem; /* Add spacing between stacked elements */
+  }
+
+  .movements__date {
+    margin-bottom: 0.5rem; /* Add spacing between stacked elements */
+  }
+
+  .movements__value {
+    margin-left: 0; /* Remove margin for stacked layout */
+    font-size: 1.5rem; /* Reduce font size for smaller screens */
+  }
+
+  .summary {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .summary__value {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .btn--sort {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+
+  .operation {
+    padding: 2rem;
+  }
+
+  .form {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .form__input {
+    width: 100%;
+    font-size: 1.4rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .form__label {
+    font-size: 1.2rem;
+    text-align: left;
+  }
+
+  .form__btn {
+    width: 100%;
+    font-size: 1.6rem;
+    padding: 0.8rem;
+    margin-top: 1rem;
+  }
+
+  .form.form--loan {
+    grid-template-columns: 1fr;
+  }
+
+  .form__label--loan {
+    grid-row: auto;
+  }
+
+  .logout-timer {
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .timer {
+    font-size: 1.2rem;
+  }
+
+  .users {
+    margin-top: 100px;
+  }
+
+  .users h1 {
+    font-size: 1.5rem;
+    margin-bottom: 50px;
+  }
+
+  .users p {
+    font-size: 1.2rem;
+  }
 }
